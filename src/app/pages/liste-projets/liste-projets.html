@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Liste des projets</h1>
+
+  <ul>
+    @for (projet of projets; track projet.id) {
+      <li>
+        <div>
+          <strong>{{ projet.nom }}</strong>
+          <span>{{ projet.statut }}</span>
+        </div>
+        <a [routerLink]="['/projet', projet.id]">Voir détail →</a>
+      </li>
+    }
+  </ul>
+
+  <a class="ajouter-lien" routerLink="/ajouter">+ Ajouter un projet</a>
+</div>

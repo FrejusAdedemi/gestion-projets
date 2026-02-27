@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Ajouter un projet</h1>
+
+  <form (ngSubmit)="soumettre()">
+    <div>
+      <label>Nom du projet</label>
+      <input type="text" [(ngModel)]="nom" name="nom" required placeholder="Ex: Mon projet" />
+    </div>
+
+    <div>
+      <label>Statut</label>
+      <select [(ngModel)]="statut" name="statut" required>
+        <option value="">-- Choisir --</option>
+        <option value="En attente">En attente</option>
+        <option value="En cours">En cours</option>
+        <option value="Terminé">Terminé</option>
+      </select>
+    </div>
+
+    <button type="submit">Ajouter le projet</button>
+  </form>
+
+  <a class="retour" routerLink="/">← Retour à la liste</a>
+</div>

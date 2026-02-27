@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Détail du projet</h1>
+
+  @if (projet) {
+    <div class="carte">
+      <p><strong>ID :</strong> {{ projet.id }}</p>
+      <p><strong>Nom :</strong> {{ projet.nom }}</p>
+      <p><strong>Statut :</strong> {{ projet.statut }}</p>
+    </div>
+  } @else {
+    <p class="erreur">Projet introuvable.</p>
+  }
+
+  <a routerLink="/">← Retour à la liste</a>
+</div>
